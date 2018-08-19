@@ -1,64 +1,81 @@
 body {
-  padding-top: 100px;
+  padding-top: 50px;
 }
+
 .flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
+
 .title {
   text-align: center;
   padding: 30px 30px 5px 30px;
 }
+
 .tab-nav {
   margin-bottom: 50px;
   margin-top: 30px;
 }
 
 .tab-nav .btn {
-  height: 120px;
+  height: 100px;
+  padding: 20px 15px;
+  font-size: 1em;
+  overflow: hidden;
 }
 
 .tab-nav .glyphicon {
   font-size: 2em;
-  margin-right: 15px;
+  margin: 5px;
 }
+
 
 .tab-nav h5 {
   text-align: left;
+  font-size: 0.6em;
 }
+
+
 section {
   padding: 0px;
 }
+
 .indi-section {
   /* padding-top: 50px; */
   padding-bottom: 0px;
 }
+
 .sub {
   padding: 30px 30px;
   text-align: left;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   background: #18BC9C;
   color: white;
+  font-size: 1em;
 }
-.sub > a {
+
+
+.sub>a {
   margin-right: 30px;
 }
+
 .sub a {
   color: black;
 }
+
 .instruction-list {
   margin: 0;
-  padding-left: 50px;
-  padding-top: 50px;
-  padding-right: 50px;
   list-style-type: none;
+  margin: 0 auto;
   margin-bottom: 50px;
 }
-.instruction-list > li {
+
+.instruction-list>li p {
+  font-size: 1em;
+}
+
+.instruction-list>li {
   counter-increment: step-counter;
   margin-bottom: 30px;
   display: flex;
@@ -67,8 +84,8 @@ section {
 
 .instruction-list li::before {
   content: counter(step-counter);
-  margin-right: 15px;
-  font-size: 2em;
+  margin-right: 30px;
+  font-size: 1em;
   background-color: rgba(44, 62, 80, 1);
   color: white;
   padding: 10px 20px;
@@ -76,76 +93,130 @@ section {
 }
 
 .list-group {
-  padding-bottom: 50px;
-  padding-left: 50px;
-  padding-right: 50px;
+  font-size: 1em;
 }
 
 
-.list-group-item > .glyphicon{
+.list-group-item>.glyphicon {
   opacity: 1;
   margin-right: 30px;
-  font-size: 2em;
+  font-size: 1em;
 }
 
-.img-container img{
-  padding: 15px;
+.img-container img {
+  padding: 30px;
   max-width: 100%;
 }
+
 .top {
   position: fixed;
-  right: 15px;
-  bottom: 25px;
+  right: 25px;
+  bottom: 55px;
   padding: 25px;
   border-radius: 100px;
-  -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);
--moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);
-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.2);
 }
+
 .top:hover {
   text-decoration: none;
 }
-.list-group:nth-child(even), .list-group:nth-child(even) > *{
+
+.top:hover:after {
+  content: 'Go to Top';
+  position: absolute;
+  bottom: -25px;
+  color: grey;
+  font-style: italic;
+}
+
+.list-group:nth-child(even),
+.list-group:nth-child(even)>* {
   background: #18BC9C;
   color: white;
 }
+
 .list-group:nth-child(even) {
   color: white;
 }
 
-.list-group:nth-child(even) .list-group-item .glyphicon{
+.list-group:nth-child(even) .list-group-item .glyphicon {
   opacity: 1;
 }
+
 /* .list-group:nth-child(even) .list-group-item{
   border-bottom: 1px solid white;
 } */
-.list-group .list-group-item:first-child{
+
+.list-group .list-group-item:first-child {
   border-top: none;
 }
-.list-group:nth-child(odd), .list-group:nth-child(odd) > *{
+
+.list-group:nth-child(odd),
+.list-group:nth-child(odd)>* {
   background: white;
   color: #2C3E50;
 }
+
 /* .list-group-item > p {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 } */
-.list-group-item{
+
+.list-group-item {
   justify-content: flex-start;
   align-items: flex-start;
   border: 0px;
 }
+
 /* .list-group-item:first-child {
   border-bottom: 0px;
 } */
+
 hr.dark {
   border-width: 2px;
   max-width: 250px;
   border-color: #2C3E50;
 }
+
 hr.light {
   border-width: 2px;
   max-width: 250px;
+}
+
+@media screen and (min-width: 576px) {
+  body {
+    padding-top: 100px;
+  }
+  .tab-nav .btn {
+    padding: 15px 50px;
+    height: 120px;
+    font-size: 1em;
+  }
+  .tab-nav h5 {
+    font-size: 1em;
+  }
+  .sub {
+    font-size: 1.5em;
+  }
+  .instruction-list>li p {
+    font-size: 1.5em;
+  }
+  .list-group {
+    font-size: 1.5em;
+  }
+  .instruction-list {
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-right: 50px;
+    margin-bottom: 50px;
+  }
+  .list-group {
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }
